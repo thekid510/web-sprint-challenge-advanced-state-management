@@ -6,8 +6,9 @@ import Header from './components/Header';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-import fetchSmurfs from './actions/index'
-class App extends Component {
+import {fetchSmurfs} from './actions/index'
+
+export class App extends Component {
   render() {
     return (
       <div className="App">
@@ -21,8 +22,16 @@ class App extends Component {
     );
   }
 }
+const mapStateToProps = state => {
+  return{
+    smurfs: state.smurfs,
+    
+  }
+}
+export default connect(
+  mapStateToProps, {fetchSmurfs }
+)(App);
 
-export default App;
 
 //Task List:
 //1. Connect the fetchSmurfs actions to the App component.
