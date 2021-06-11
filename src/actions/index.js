@@ -10,7 +10,13 @@ export const fetchSmurfs = () => {
     return(dispatch)=> {
         dispatch(fetchStart());
 
-        axios.get("")
+        axios.get("http://localhost:3005/")
+        .then(resp => {
+            dispatch(fetchSuccess(resp.data.results[0]));
+        })
+        .catch(err => {
+            dispatch(fetchFail(err));
+        })
     }
 }
 //Task List:

@@ -51,7 +51,7 @@ const reducer = (state=initialState, action )=>{
             case ADD_ERROR:
                 return{
                 ...state,
-                error: action.payload,
+                error: 'You must fill out all fields to add a smurf'
                 }
         default:
         return state;
