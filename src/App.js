@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-
+import React, { Component, useEffect } from "react";
+import { connect } from 'react-redux'
 import AddForm from './components/AddForm';
 import SmurfList from './components/SmurfList';
 import Header from './components/Header';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-
+import fetchSmurfs from './actions/index'
 class App extends Component {
   render() {
     return (

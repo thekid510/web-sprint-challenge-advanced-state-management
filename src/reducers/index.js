@@ -1,5 +1,6 @@
 import {FETCH_START, FETCH_SUCCESS, FETCH_FAIL} from '../actions/index'
 import { ADD_SMURF, ADD_ERROR } from '../actions/index';
+
 export const initialState = {
     smurfs :[
         {

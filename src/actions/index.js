@@ -35,3 +35,9 @@ export const fetchSuccess = (smurf)=> {
 export const fetchFail = (error)=> {
     return({type: FETCH_FAIL, payload:error});
 }
+export const addSmurf = (newSmurf)=> {
+    return({type: ADD_SMURF, payload:newSmurf})
+}
+export const addError = (error)=> {
+    return({type: ADD_SMURF, payload:error})
+}
