@@ -3,15 +3,19 @@ import ReactDOM from "react-dom";
 
 import "./index.css";
 import App from "./App";
-
+import thunk from 'redux-thunk'
+import rootReducer from 'redux-thunk'
+import { Provider } from "react-redux";
+import {store} from './store';
 const { worker } = require('./mocks/browser');
 worker.start();
 
-const rootElement = document.getElementById("root");
 
 ReactDOM.render(
-    <App />, 
-    rootElement
+    <Provider store = {store}>
+    <App />
+    </Provider>,
+    document.getElementById('root')
 );
 
 //Task List:

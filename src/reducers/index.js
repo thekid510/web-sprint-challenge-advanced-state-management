@@ -1,11 +1,31 @@
 
-export const initialState = {
-}
 
-const reducer = ()=>{
-}
+// export const initialState = {
+//     smurfs:[],
+//     isLoading:false,
+//     error:''
+// }
 
-export default reducer;
+// const reducer = (state=initialState, action)=>{
+//     switch(action.type) {
+//         case "FETCH_START":
+//         return({
+//             ...state, isFetching: true 
+//         })
+//         case "FETCH_SUCCESS":
+//         return({
+//             ...state,isFetching:false, smurfs: action.payload
+//         })
+//         case "FETCH_FAIL":
+//         return({
+//             ...state, isFetching:false, error:""
+//         })
+//         default:
+//             return(state);
+//     }
+// }
+
+// export default reducer;
 
 //Task List:
 //1. Adds the following state values into the initialState:
